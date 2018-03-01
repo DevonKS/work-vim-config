@@ -23,26 +23,10 @@ nnoremap <leader>bd :bd<CR>
 nnoremap <leader>bl :ls<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bp :bp<CR>
-nnoremap <leader>b1 :b1<CR>
-nnoremap <leader>b2 :b2<CR>
-nnoremap <leader>b3 :b3<CR>
-nnoremap <leader>b4 :b4<CR>
-nnoremap <leader>b5 :b5<CR>
-nnoremap <leader>b6 :b6<CR>
-nnoremap <leader>b7 :b7<CR>
-nnoremap <leader>b8 :b8<CR>
-nnoremap <leader>b9 :b9<CR>
-nnoremap <leader>vb0 :vsp<Space><bar><Space>b0<CR>
-nnoremap <leader>vb1 :vsp<Space><bar><Space>b1<CR>
-nnoremap <leader>vb2 :vsp<Space><bar><Space>b2<CR>
-nnoremap <leader>vb3 :vsp<Space><bar><Space>b3<CR>
-nnoremap <leader>vb4 :vsp<Space><bar><Space>b4<CR>
-nnoremap <leader>vb5 :vsp<Space><bar><Space>b5<CR>
-nnoremap <leader>vb6 :vsp<Space><bar><Space>b6<CR>
-nnoremap <leader>vb7 :vsp<Space><bar><Space>b7<CR>
-nnoremap <leader>vb8 :vsp<Space><bar><Space>b8<CR>
-nnoremap <leader>vb9 :vsp<Space><bar><Space>b9<CR>
-nnoremap <leader>vb0 :vsp<Space><bar><Space>b0<CR>
+
+nnoremap <leader>b :b
+nnoremap <leader>vb :vsp<Space><bar><Space>b
+nnoremap <leader>hb :sp<Space><bar><Space>b
 
 "Window Management
 nnoremap <leader>sv :vsp<Space>

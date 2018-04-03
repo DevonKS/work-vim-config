@@ -17,6 +17,7 @@ set encoding=utf-8
 inoremap jk <Esc>
 
 nnoremap <leader>e :Explore<CR>
+nnoremap <leader>o :edit<Space>
 
 "Buffer Management
 nnoremap <leader>bd :bd<CR>
@@ -47,4 +48,12 @@ let g:airline_skip_empty_sections = 1
 set wildmenu
 set wildmode=list:longest,full
 
+if !has("gui_running")
+   set term=xterm
+   set t_Co=256
+   let &t_AB="\e[48;5;%dm"
+   let &t_AF="\e[38;5;%dm"
+endif
+
+set background=dark
 colorscheme gruvbox

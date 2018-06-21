@@ -9,13 +9,20 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
+Plug 'vim-syntastic/syntastic'
 
 "Javascript tools
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 Plug 'editorconfig/editorconfig-vim'
+
+"Clojure Tools
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-surround'
+Plug 'venantius/vim-eastwood'
+Plug 'venantius/vim-cljfmt'
 
 call plug#end()
 
@@ -62,13 +69,30 @@ let g:user_emmet_settings = {
     \  },
   \}
 let g:jsx_ext_required = 0
-let g:ale_lint_on_enter = 0 
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
+
+let g:airline#extensions#ale#enabled = 1
 let g:ale_javascript_eslint_use_global = 0
-let b:ale_fixers = [
-\   'eslint',
-\]
+let g:ale_lint_on_text_changed='never'
+let g:ale_lint_on_enter = 0 
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_save = 1
+
+"Syntastic setup
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"eastwood setup
+let g:syntastic_clojure_checkers = ['eastwood']
+
+"Omnicomplete setup
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 "Always show status bar
 set laststatus=2
@@ -89,3 +113,6 @@ endif
 
 set background=dark
 colorscheme gruvbox
+set guifont=Fira\ Code
+set renderoptions=type:directx
+set encoding=utf-8

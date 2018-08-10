@@ -33,7 +33,7 @@ set encoding=utf-8
 
 inoremap jk <Esc>
 
-nnoremap <leader>e :Explore<CR>
+nnoremap <leader>e :Vexplore<CR>
 nnoremap <leader>o :edit<Space>
 
 "Buffer Management
@@ -93,6 +93,18 @@ let g:syntastic_clojure_checkers = ['eastwood']
 "Omnicomplete setup
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+
+"netrw setup
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
+
 
 "Always show status bar
 set laststatus=2
